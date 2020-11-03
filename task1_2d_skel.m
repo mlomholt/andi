@@ -1,12 +1,12 @@
-%inference for task 2 in 3 dimension
+%inference for task 1 in 2 dimension
 
 tstart=tic;
 clear models obs alpha results
-midpath='task2_3d_';
-datapath='/Datafiles/Task2/';
-destpath='/Submit/Task2_3/';
-dim=3;
-part_total=10000;
+midpath='task1_2d_';%for task2 1dimension
+datapath='/Datafiles/Task1/';
+destpath='/Submit/Task1_2/';
+dim=2;
+part_total=13309;
 maxpoints=200; %cuts longer trajectories at 200 points
 inv_cauchy=@(u) tan(pi*(u-1/2));
 ctrw_joined=ns_join_models([andi_ctrw_model() andi_ctrw_model(0)]);
@@ -40,12 +40,12 @@ parfor ind=1:part_total
     fprintf('Finished trajectory %i\n',ind);
     alpha=andi_get_alpha_nolevy_etc(results);
     alpha=andi_get_levy_via_bgof_flex(alpha,results,obs,3.5);
-%     if(alpha.model_probs(4)==1)
-%         alpha.median=tamsd(pos);
-%     end 
-    outmat=[dim alpha.model_probs];
+    if(alpha.model_probs(4)==1)
+        alpha.median=tamsd(pos);
+    end 
+    outmat1=[dim alpha.median];
     filename1=sprintf('%d%s',ind,'.txt');
-    dlmwrite(fullfile(destpath,filename1),outmat,'delimiter','\t');
+    dlmwrite(fullfile(destpath,filename1),outmat1,'delimiter','\t');
             
     
 end

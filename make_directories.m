@@ -1,0 +1,12 @@
+mkdir Datafiles/Task1/
+mkdir Datafiles/Task2/
+mkdir Datafiles/Task3/
+mkdir Submit/Task1_1/
+mkdir Submit/Task1_2/
+mkdir Submit/Task1_3/
+mkdir Submit/Task2_1/
+mkdir Submit/Task2_2/
+mkdir Submit/Task2_3/
+mkdir Submit/Task3_1/
+mkdir Submit/Task3_2/
+mkdir Submit/Task3_3/

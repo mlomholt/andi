@@ -16,7 +16,6 @@ while jj<10001
     A=str2num(st);
     A=A(2:end);
     filename1=sprintf('%s%s%d%s',fname,'_1d_',jj,'.txt');
-    %writematrix(A,fullfile(dest_id,filename1),'Delimiter','tab');
     dlmwrite(fullfile(dest_id,filename1),A,'delimiter','\t','precision',12);
     jj=jj+1;
 end  
@@ -29,7 +28,6 @@ while jj<20001
     rownum=length(A)/2;
     A=reshape(A,rownum,2);
     filename1=sprintf('%s%s%d%s',fname,'_2d_',kk,'.txt');
-    %writematrix(A,fullfile(dest_id,filename1),'Delimiter','tab');
     dlmwrite(fullfile(dest_id,filename1),A,'delimiter','\t','precision',12);
     jj=jj+1;
     kk=kk+1;
@@ -43,7 +41,6 @@ while jj<30001
     rownum=length(A)/3;
     A=reshape(A,rownum,3);
     filename1=sprintf('%s%s%d%s',fname,'_3d_',kk,'.txt');
-    %writematrix(A,fullfile(dest_id,filename1),'Delimiter','tab');
     dlmwrite(fullfile(dest_id,filename1),A,'delimiter','\t','precision',12);
     jj=jj+1;
     kk=kk+1;

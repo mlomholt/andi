@@ -11,3 +11,5 @@ corresponding folder inside the folder named "Submit".
 5. The file "format_submit_task{X}.m" can then be used to combine the 
 results into the format required for the AnDi challenge. 
 
+See summary_of_the_method.pdf for an overview of the method.
+
